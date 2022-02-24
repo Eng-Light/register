@@ -151,9 +151,11 @@ class _PersonalDetailsPage extends State<PersonalDetailsPage> {
                       text: "Next",
                       onClick: () {
                         if (_formKey.currentState!.validate()) {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => AddressDetailsPage()));
-              }
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => AddressDetailsPage()));
+                        }
                       },
                     ),
                   ]),
@@ -170,7 +172,7 @@ class _PersonalDetailsPage extends State<PersonalDetailsPage> {
       if (pickedImage != null) {
         _image = File(pickedImage.path);
       } else {
-        print("No Image Selected");
+        //print("No Image Selected");
       }
     });
   }
